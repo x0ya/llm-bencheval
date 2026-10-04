@@ -7,11 +7,53 @@
     "answer": "Canberra"
   },
   {
+    "id": "FACT_002",
+    "category": "factual",
+    "difficulty": "easy",
+    "question": "Who wrote the play Romeo and Juliet?",
+    "answer": "Shakespeare"
+  },
+  {
+    "id": "FACT_003",
+    "category": "factual",
+    "difficulty": "medium",
+    "question": "Which chemical element has the atomic number 26?",
+    "answer": "Iron"
+  },
+  {
+    "id": "FACT_004",
+    "category": "factual",
+    "difficulty": "medium",
+    "question": "What is the smallest country in the world by area?",
+    "answer": "Vatican"
+  },
+  {
     "id": "MATH_001",
     "category": "math",
     "difficulty": "medium",
     "question": "A shop sells pens at 12 rupees each. If I buy 7 pens and pay with a 100 rupee note, how much change do I get?",
     "answer": "16"
+  },
+  {
+    "id": "MATH_002",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "A train travels 180 km in 3 hours at a constant speed. How far will it travel in 5 hours at the same speed?",
+    "answer": "300"
+  },
+  {
+    "id": "MATH_003",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What is 15 percent of 240?",
+    "answer": "36"
+  },
+  {
+    "id": "MATH_004",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "Ravi is twice as old as Meera. In 6 years, the sum of their ages will be 42. How old is Ravi now?",
+    "answer": "20"
   },
   {
     "id": "LOGIC_001",
@@ -21,10 +63,80 @@
     "answer": "No"
   },
   {
+    "id": "LOGIC_002",
+    "category": "logic",
+    "difficulty": "easy",
+    "question": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies? Answer Yes or No and explain briefly.",
+    "answer": "Yes"
+  },
+  {
+    "id": "LOGIC_003",
+    "category": "logic",
+    "difficulty": "easy",
+    "question": "Sita is taller than Gita. Gita is taller than Rita. Is Sita taller than Rita? Answer Yes or No and explain briefly.",
+    "answer": "Yes"
+  },
+  {
+    "id": "LOGIC_004",
+    "category": "logic",
+    "difficulty": "hard",
+    "question": "If it rains, the ground gets wet. The ground is wet. Can we conclude that it rained? Answer Yes or No and explain briefly.",
+    "answer": "No"
+  },
+  {
+    "id": "READ_001",
+    "category": "reading",
+    "difficulty": "medium",
+    "question": "Read the passage and answer the question.\n\nPassage: The library opens at 9 a.m. on weekdays and at 10 a.m. on weekends. Ravi arrived at 9:30 a.m. on a Saturday.\n\nQuestion: Was the library open when Ravi arrived? Answer Yes or No and explain briefly.",
+    "answer": "No"
+  },
+  {
+    "id": "READ_002",
+    "category": "reading",
+    "difficulty": "medium",
+    "question": "Read the passage and answer the question.\n\nPassage: Meera has three siblings: Arun, Bela and Chitra. Arun is older than Meera. Bela is younger than Meera. Chitra is the youngest of all four.\n\nQuestion: Is Bela older than Chitra? Answer Yes or No and explain briefly.",
+    "answer": "Yes"
+  },
+  {
+    "id": "READ_003",
+    "category": "reading",
+    "difficulty": "medium",
+    "question": "Read the passage and answer the question.\n\nPassage: The village well was dug in 1952 and deepened in 1978. In 1995, a hand pump replaced the rope and bucket.\n\nQuestion: Was the hand pump installed before the well was deepened? Answer Yes or No and explain briefly.",
+    "answer": "No"
+  },
+  {
+    "id": "READ_004",
+    "category": "reading",
+    "difficulty": "easy",
+    "question": "Read the passage and answer the question.\n\nPassage: The museum is closed on Mondays. On all other days it is open from 10 a.m. to 5 p.m.\n\nQuestion: Can a visitor enter at 4:30 p.m. on a Tuesday? Answer Yes or No and explain briefly.",
+    "answer": "Yes"
+  },
+  {
     "id": "AMBIG_001",
     "category": "ambiguous",
     "difficulty": "hard",
     "question": "Who was the first person to walk on the Sun?",
     "answer": "Nobody. The question is invalid because no one can walk on the Sun."
+  },
+  {
+    "id": "AMBIG_002",
+    "category": "ambiguous",
+    "difficulty": "medium",
+    "question": "What is the name of the 15th month of the year?",
+    "answer": "There is no 15th month. A year has 12 months."
+  },
+  {
+    "id": "AMBIG_003",
+    "category": "ambiguous",
+    "difficulty": "hard",
+    "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+    "answer": "False premise. Einstein won the 1921 Nobel Prize in Physics for the photoelectric effect, not for relativity."
+  },
+  {
+    "id": "AMBIG_004",
+    "category": "ambiguous",
+    "difficulty": "hard",
+    "question": "According to the 2019 International Unicorn Census, what is the exact colour of a unicorn's horn?",
+    "answer": "No such census exists. The question rests on a fictional premise."
   }
 ]
