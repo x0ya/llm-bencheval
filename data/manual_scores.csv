@@ -1,0 +1,5 @@
+id,model,run,manual_score
+AMBIG_001,gemini,1,1
+AMBIG_002,gemini,1,1
+AMBIG_003,gemini,1,1
+AMBIG_004,gemini,1,1

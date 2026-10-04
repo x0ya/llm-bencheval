@@ -1,4 +1,5 @@
 import csv
+import os
 import json
 import re
 from collections import defaultdict
@@ -41,11 +42,22 @@ METHODS = {
 }
 
 
+def load_manual():
+    manual = {}
+    path = "data/manual_scores.csv"
+    if os.path.exists(path):
+        with open(path) as f:
+            for row in csv.DictReader(f):
+                manual[(row["id"], row["model"], row["run"])] = int(row["manual_score"])
+    return manual
+
+
 def main():
     with open("data/questions.json") as f:
         questions = {q["id"]: q for q in json.load(f)}
 
     rows = []
+    manual = load_manual()
     with open("data/responses.jsonl") as f:
         for line in f:
             r = json.loads(line)
@@ -57,8 +69,13 @@ def main():
                 auto_score = METHODS[category](response, q["answer"])
                 status = "auto"
             else:
-                auto_score = ""
-                status = "manual"
+                key = (r["id"], r["model"], str(r["run"]))
+                if key in manual:
+                    auto_score = manual[key]
+                    status = "manual-done"
+                else:
+                    auto_score = ""
+                    status = "manual"
 
             rows.append({
                 "id": r["id"],
@@ -76,7 +93,7 @@ def main():
 
     totals = defaultdict(lambda: [0, 0])
     for row in rows:
-        if row["status"] == "auto":
+        if row["status"] in ("auto", "manual-done"):
             key = (row["model"], row["category"])
             totals[key][0] += row["auto_score"]
             totals[key][1] += 1

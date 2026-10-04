@@ -2,7 +2,7 @@ id,model,run,category,auto_score,status
 FACT_001,gemini,1,factual,1,auto
 MATH_001,gemini,1,math,1,auto
 LOGIC_001,gemini,1,logic,1,auto
-AMBIG_001,gemini,1,ambiguous,,manual
+AMBIG_001,gemini,1,ambiguous,1,manual-done
 FACT_002,gemini,1,factual,1,auto
 FACT_003,gemini,1,factual,1,auto
 FACT_004,gemini,1,factual,1,auto
@@ -16,6 +16,6 @@ READ_001,gemini,1,reading,1,auto
 READ_002,gemini,1,reading,1,auto
 READ_003,gemini,1,reading,1,auto
 READ_004,gemini,1,reading,1,auto
-AMBIG_002,gemini,1,ambiguous,,manual
-AMBIG_003,gemini,1,ambiguous,,manual
-AMBIG_004,gemini,1,ambiguous,,manual
+AMBIG_002,gemini,1,ambiguous,1,manual-done
+AMBIG_003,gemini,1,ambiguous,1,manual-done
+AMBIG_004,gemini,1,ambiguous,1,manual-done
