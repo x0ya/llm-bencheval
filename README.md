@@ -1,4 +1,3 @@
-
 # LLM-BenchEval
 
 Pipeline to ask several LLMs the same questions, save the answers and score them.
@@ -11,9 +10,9 @@ Pipeline to ask several LLMs the same questions, save the answers and score them
     source venv/bin/activate
     pip install -r requirements.txt
     cp .env.example .env
-
-Open `.env` and add your own API keys. Never commit this file.
     nano .env
+
+In `.env`, add your own API keys after the `=` signs. In nano, save with Ctrl+O then Enter, and exit with Ctrl+X. Never commit this file.
 
 ## Run (always from the project root)
 
@@ -32,4 +31,3 @@ Open `.env` and add your own API keys. Never commit this file.
 ## Notes
 
 Developed with Python 3.14 on WSL. Currently only Gemini is wired up in collect.py.
-EOF
