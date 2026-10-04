@@ -7,7 +7,7 @@ Pipeline to ask several LLMs the same questions, save the answers and score them
     git clone <repo-url>
     cd llm-bencheval
     python3 -m venv venv
-    source venv/bin/activate
+    source venv/bin/activate (run every session)
     pip install -r requirements.txt
     cp .env.example .env
     nano .env
