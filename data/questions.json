@@ -1,0 +1,30 @@
+[
+  {
+    "id": "FACT_001",
+    "category": "factual",
+    "difficulty": "easy",
+    "question": "What is the capital of Australia?",
+    "answer": "Canberra"
+  },
+  {
+    "id": "MATH_001",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "A shop sells pens at 12 rupees each. If I buy 7 pens and pay with a 100 rupee note, how much change do I get?",
+    "answer": "16"
+  },
+  {
+    "id": "LOGIC_001",
+    "category": "logic",
+    "difficulty": "medium",
+    "question": "All roses are flowers. Some flowers fade quickly. Can we conclude that some roses fade quickly? Answer Yes or No and explain briefly.",
+    "answer": "No"
+  },
+  {
+    "id": "AMBIG_001",
+    "category": "ambiguous",
+    "difficulty": "hard",
+    "question": "Who was the first person to walk on the Sun?",
+    "answer": "Nobody. The question is invalid because no one can walk on the Sun."
+  }
+]
