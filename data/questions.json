@@ -138,5 +138,89 @@
     "difficulty": "hard",
     "question": "According to the 2019 International Unicorn Census, what is the exact colour of a unicorn's horn?",
     "answer": "No such census exists. The question rests on a fictional premise."
+  },
+    {
+    "id": "FACT_005",
+    "category": "factual",
+    "difficulty": "hard",
+    "question": "Which planet in our solar system has the shortest day, rotating once in about 10 hours?",
+    "answer": "Jupiter"
+  },
+  {
+    "id": "FACT_006",
+    "category": "factual",
+    "difficulty": "hard",
+    "question": "What is the capital of Burkina Faso?",
+    "answer": "Ouagadougou"
+  },
+  {
+    "id": "FACT_007",
+    "category": "factual",
+    "difficulty": "medium",
+    "question": "Which chemical element has the symbol W?",
+    "answer": "Tungsten"
+  },
+  {
+    "id": "MATH_005",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "A bat and a ball cost 110 rupees in total. The bat costs 100 rupees more than the ball. How many rupees does the ball cost?",
+    "answer": "5"
+  },
+  {
+    "id": "MATH_006",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "A shopkeeper marks an item 20 percent above its cost price and then gives a 10 percent discount on the marked price. If the cost price is 500 rupees, what is the selling price in rupees?",
+    "answer": "540"
+  },
+  {
+    "id": "MATH_007",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "A farmer has 17 sheep. All but 9 of them run away. How many sheep are left?",
+    "answer": "9"
+  },
+  {
+    "id": "LOGIC_005",
+    "category": "logic",
+    "difficulty": "hard",
+    "question": "Some doctors are artists. All artists are musicians. Can we conclude that some doctors are musicians? Answer Yes or No and explain briefly.",
+    "answer": "Yes"
+  },
+  {
+    "id": "LOGIC_006",
+    "category": "logic",
+    "difficulty": "hard",
+    "question": "Some students are athletes. Some athletes are vegetarians. Can we conclude that some students are vegetarians? Answer Yes or No and explain briefly.",
+    "answer": "No"
+  },
+  {
+    "id": "READ_005",
+    "category": "reading",
+    "difficulty": "hard",
+    "question": "Read the passage and answer the question.\n\nPassage: Anil, Binu and Chandra each ordered a different drink: tea, coffee or juice. Anil does not drink tea. Binu ordered coffee.\n\nQuestion: Did Chandra order tea? Answer Yes or No and explain briefly.",
+    "answer": "Yes"
+  },
+  {
+    "id": "READ_006",
+    "category": "reading",
+    "difficulty": "hard",
+    "question": "Read the passage and answer the question.\n\nPassage: A bakery sold 40 loaves on Monday, 55 on Tuesday and 35 on Wednesday. On Thursday it closed early because of rain and sold only 20 loaves.\n\nQuestion: Did the bakery sell more loaves on Tuesday than on the other three days combined? Answer Yes or No and explain briefly.",
+    "answer": "No"
+  },
+  {
+    "id": "AMBIG_005",
+    "category": "ambiguous",
+    "difficulty": "hard",
+    "question": "In what year did Marie Curie win her third Nobel Prize?",
+    "answer": "False premise. Marie Curie won two Nobel Prizes (Physics 1903, Chemistry 1911), not three."
+  },
+  {
+    "id": "AMBIG_006",
+    "category": "ambiguous",
+    "difficulty": "hard",
+    "question": "What is the largest prime number?",
+    "answer": "There is no largest prime number. There are infinitely many primes."
   }
 ]

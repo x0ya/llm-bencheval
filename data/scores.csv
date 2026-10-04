@@ -19,3 +19,15 @@ READ_004,gemini,1,reading,1,auto
 AMBIG_002,gemini,1,ambiguous,1,manual-done
 AMBIG_003,gemini,1,ambiguous,1,manual-done
 AMBIG_004,gemini,1,ambiguous,1,manual-done
+FACT_005,gemini,1,factual,1,auto
+FACT_006,gemini,1,factual,1,auto
+FACT_007,gemini,1,factual,1,auto
+MATH_005,gemini,1,math,1,auto
+MATH_006,gemini,1,math,1,auto
+MATH_007,gemini,1,math,1,auto
+LOGIC_005,gemini,1,logic,1,auto
+LOGIC_006,gemini,1,logic,1,auto
+READ_005,gemini,1,reading,1,auto
+READ_006,gemini,1,reading,1,auto
+AMBIG_005,gemini,1,ambiguous,1,manual-done
+AMBIG_006,gemini,1,ambiguous,1,manual-done
