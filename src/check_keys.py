@@ -5,10 +5,7 @@ load_dotenv()
 
 NAMES = [
     "GEMINI_API_KEY",
-    "OPENAI_API_KEY",
-    "DEEPSEEK_API_KEY",
-    "ANTHROPIC_API_KEY",
-    "LLAMA_API_KEY",   # change this to the name you used for Llama
+    "OPENROUTER_API_KEY"
 ]
 
 for name in NAMES:
