@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 NAMES = [
-    "GEMINI_API_KEY",
-    "OPENROUTER_API_KEY"
+    "OPENROUTER_API_KEY",
+    "TAVILY_API_KEY"
 ]
 
 for name in NAMES:
