@@ -18,7 +18,7 @@ def cited_numbers(text, how_many):
 
 def run_one(label, prompt):
     try:
-        return label, ask_model(label, prompt, max_tokens=500), None
+        return label, ask_model(label, prompt, max_tokens=1500), None
     except OutOfCreditError:
         return label, None, "OUT OF CREDIT"
     except Exception as e:
@@ -51,7 +51,10 @@ def main():
 
                 print(label.upper(), "(" + str(result["seconds"]) + "s,",
                       result["tokens"], "tokens)")
-                print(result["text"])
+                if result["text"].strip():
+                    print(result["text"])
+                else:
+                    print("(empty answer: the model used its token budget thinking)")
 
                 used = cited_numbers(result["text"], len(sources))
                 print("\nSources cited by " + label + ":")

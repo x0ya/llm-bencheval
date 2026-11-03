@@ -50,11 +50,17 @@ def ask_model(label, prompt, max_tokens=500):
                 "seconds": 1.0, "tokens": 0}
 
     start = time.time()
+    extra = {}
+    if label == "deepseek":
+        extra = {"reasoning": {"enabled": False}}
+
+    start = time.time()
     try:
         reply = get_client().chat.completions.create(
             model=MODELS[label],
             messages=[{"role": "user", "content": prompt}],
             max_tokens=max_tokens,
+            extra_body=extra,
         )
     except APIStatusError as e:
         msg = str(e).lower()
