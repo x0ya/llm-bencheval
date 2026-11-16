@@ -47,3 +47,43 @@
   color: white;
   cursor: pointer;
 }
+
+.muted {
+  color: #777;
+}
+
+.answer {
+  white-space: pre-wrap;
+}
+
+.meta {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.error {
+  color: #b00020;
+}
+
+.prompt-row button:disabled {
+  background: #9aa8d6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border: 2px solid #ccc;
+  border-top-color: #2b59ff;
+  border-radius: 50%;
+  vertical-align: middle;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
