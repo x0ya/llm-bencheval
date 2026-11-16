@@ -22,3 +22,28 @@
   font-size: 1.1rem;
   text-transform: capitalize;
 }
+
+.prompt-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.prompt-row textarea {
+  flex: 1;
+  padding: 10px;
+  font: inherit;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.prompt-row button {
+  padding: 0 24px;
+  font: inherit;
+  border: none;
+  border-radius: 8px;
+  background: #2b59ff;
+  color: white;
+  cursor: pointer;
+}

@@ -7,7 +7,7 @@ function ModelCard({ name, text }: ModelCardProps) {
   return (
     <div className="card">
       <h2>{name}</h2>
-      <p>{text}</p>
+      <p>{text || "No answer yet."}</p>
     </div>
   )
 }
