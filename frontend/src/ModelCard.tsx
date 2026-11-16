@@ -1,9 +1,10 @@
-import type { CardState } from "./types"
+import type { CardState } from "./types";
+import ReactMarkdown from "react-markdown";
 
 type ModelCardProps = {
-  name: string
-  state: CardState
-}
+  name: string;
+  state: CardState;
+};
 
 function ModelCard({ name, state }: ModelCardProps) {
   return (
@@ -20,7 +21,19 @@ function ModelCard({ name, state }: ModelCardProps) {
 
       {state.status === "done" && (
         <>
-          <p className="answer">{state.text}</p>
+          <div className="answer">
+            <ReactMarkdown
+              components={{
+                a: ({ href, children }) => (
+                  <a href={href} target="_blank" rel="noopener noreferrer">
+                    {children}
+                  </a>
+                ),
+              }}
+            >
+              {state.text}
+            </ReactMarkdown>
+          </div>
           <p className="meta">{state.seconds} s</p>
         </>
       )}
@@ -29,7 +42,7 @@ function ModelCard({ name, state }: ModelCardProps) {
         <p className="error">Error: {state.message}</p>
       )}
     </div>
-  )
+  );
 }
 
-export default ModelCard
+export default ModelCard;

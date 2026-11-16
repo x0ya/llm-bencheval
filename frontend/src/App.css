@@ -53,7 +53,35 @@
 }
 
 .answer {
-  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.answer p {
+  margin: 0 0 8px;
+}
+
+.answer ul,
+.answer ol {
+  margin: 0 0 8px;
+  padding-left: 20px;
+}
+
+.answer pre {
+  overflow-x: auto;
+  background: #f3f3f5;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.answer code {
+  background: #f3f3f5;
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
+.answer pre code {
+  padding: 0;
+  background: none;
 }
 
 .meta {
