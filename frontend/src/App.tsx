@@ -3,8 +3,12 @@ import ModelCard from "./ModelCard"
 import { fakeAsk } from "./mockApi"
 import type { CardState } from "./types"
 import "./App.css"
+import { askModel } from "./api"
 
 const MODELS = ["gemini", "chatgpt", "claude", "deepseek", "llama"]
+
+const USE_MOCK = false
+const ask = USE_MOCK ? fakeAsk : askModel
 
 function idleResults(): Record<string, CardState> {
   const r: Record<string, CardState> = {}
@@ -31,7 +35,7 @@ function App() {
     setResults(loading)
 
     MODELS.forEach((name) => {
-      fakeAsk(name, text).then((res) => {
+      ask(name, text).then((res) => {
         if (res.ok) {
           setCard(name, { status: "done", text: res.text, seconds: res.seconds })
         } else {
