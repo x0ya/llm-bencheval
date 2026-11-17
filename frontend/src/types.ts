@@ -1,3 +1,9 @@
+export type Source = {
+  title: string
+  url: string
+  snippet: string
+}
+
 export type CardState =
   | { status: "idle" }
   | { status: "loading" }

@@ -1,14 +1,11 @@
 import { useState } from "react"
 import ModelCard from "./ModelCard"
-import { fakeAsk } from "./mockApi"
-import type { CardState } from "./types"
+import SourcesList from "./SourcesList"
+import { askModel, searchWeb } from "./api"
+import type { CardState, Source } from "./types"
 import "./App.css"
-import { askModel } from "./api"
 
 const MODELS = ["gemini", "chatgpt", "claude", "deepseek", "llama"]
-
-const USE_MOCK = false
-const ask = USE_MOCK ? fakeAsk : askModel
 
 function idleResults(): Record<string, CardState> {
   const r: Record<string, CardState> = {}
@@ -18,24 +15,42 @@ function idleResults(): Record<string, CardState> {
 
 function App() {
   const [prompt, setPrompt] = useState("")
+  const [useSearch, setUseSearch] = useState(false)
+  const [searching, setSearching] = useState(false)
+  const [sources, setSources] = useState<Source[]>([])
+  const [searchNote, setSearchNote] = useState("")
   const [results, setResults] = useState<Record<string, CardState>>(idleResults())
 
-  const busy = Object.values(results).some((r) => r.status === "loading")
+  const busy =
+    searching || Object.values(results).some((r) => r.status === "loading")
 
   function setCard(name: string, state: CardState) {
     setResults((prev) => ({ ...prev, [name]: state }))
   }
 
-  function handleSend() {
+  async function handleSend() {
     const text = prompt.trim()
     if (text === "" || busy) return
+
+    setSearchNote("")
+    let found: Source[] = []
+
+    if (useSearch) {
+      setSearching(true)
+      found = await searchWeb(text)
+      setSearching(false)
+      if (found.length === 0) {
+        setSearchNote("Search returned no sources, so the models answered without them.")
+      }
+    }
+    setSources(found)
 
     const loading: Record<string, CardState> = {}
     for (const name of MODELS) loading[name] = { status: "loading" }
     setResults(loading)
 
     MODELS.forEach((name) => {
-      ask(name, text).then((res) => {
+      askModel(name, text, 500, found).then((res) => {
         if (res.ok) {
           setCard(name, { status: "done", text: res.text, seconds: res.seconds })
         } else {
@@ -57,15 +72,27 @@ function App() {
           rows={3}
         />
         <button onClick={handleSend} disabled={busy}>
-          {busy ? "Working..." : "Send"}
+          {searching ? "Searching..." : busy ? "Working..." : "Send"}
         </button>
       </div>
 
+      <label className="toggle">
+        <input
+          type="checkbox"
+          checked={useSearch}
+          onChange={(e) => setUseSearch(e.target.checked)}
+        />
+        Search the web and give every model the same sources
+      </label>
+      {searchNote && <p className="muted">{searchNote}</p>}
+
       <div className="grid">
         {MODELS.map((name) => (
-          <ModelCard key={name} name={name} state={results[name]} />
+          <ModelCard key={name} name={name} state={results[name]} sources={sources} />
         ))}
       </div>
+
+      <SourcesList sources={sources} />
     </div>
   )
 }
